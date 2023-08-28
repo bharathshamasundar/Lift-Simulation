@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/main.css" />
-    <title>Lift Simulator - Input</title>
+    <title>Lift Simulator - Interactive UI</title>
   </head>
   <body>
     <div class="container">
       <h1>Lift Simulator</h1>
-      <label for="numFloors">Number of Floors:</label>
-      <input type="number" id="numFloors" min="2" />
-      <label for="numLifts">Number of Lifts:</label>
-      <input type="number" id="numLifts" min="1" />
-      <button id="startButton">Start Simulation</button>
+      <div class="grid-container">
+        <div id="floorContainer" class="floor-container"></div>
+        <div id="liftContainer" class="lift-container"></div>
+      </div>
     </div>
     <script src="/src/js/main.js"></script>
   </body>

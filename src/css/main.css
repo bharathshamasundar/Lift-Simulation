@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.floor-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.floor {
+    width: 80px;
+    height: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lift-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.lift {
+    width: 60px;
+    height: 100px;
+    background-color: #3498db;
+    border: 1px solid #2980b9;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* ... Existing styles ... */
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(var(--num-floors), 1fr); /* Rows based on number of floors */
+    grid-template-columns: repeat(auto-fit, minmax(auto, 200px)); /* Flexible columns for lifts */
+    gap: 20px;
+    align-items: center; /* Align items horizontally in the center of each grid cell */
+}
+
+.floor-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--num-floors), 1fr);
+    gap: 20px;
+    justify-self: start; /* Align floors to the left of their grid cell */
+    align-self: start; /* Align floors at the top of their grid cell */
+}
